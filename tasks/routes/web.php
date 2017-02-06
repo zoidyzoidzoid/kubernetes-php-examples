@@ -15,12 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::auth();
-
-Route::get('/tasks', 'TaskController@index');
-Route::post('/task', 'TaskController@store');
-Route::delete('/task/{task}', 'TaskController@destroy');
-
-Route::get('/home', 'HomeController@index');
+Route::get('/test', function () {
+      return response()->json([
+        'version' => env('APP_VERSION', 'missing'),
+        'hostname' => env('HOSTNAME', 'missing')
+    ]);
+});

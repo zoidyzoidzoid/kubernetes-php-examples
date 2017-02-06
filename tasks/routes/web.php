@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
       return response()->json([
         'version' => env('APP_VERSION', 'missing'),
-        'hostname' => env('HOSTNAME', 'missing')
+        'hostname' => env('HOSTNAME')
+        'message' => 'Hello, world!'
     ]);
 });

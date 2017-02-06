@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: tasks-redis
+  name: tasks-redis
+  selfLink: /api/v1/namespaces//services/tasks-redis
+spec:
+  clusterIP: <unknown>
+  ports:
+  - port: 6379
+    protocol: TCP
+    targetPort: 6379
+  selector:
+    run: tasks-redis
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

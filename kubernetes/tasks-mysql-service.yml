@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: tasks-mysql
+  name: tasks-mysql
+  selfLink: /api/v1/namespaces//services/tasks-mysql
+spec:
+  clusterIP: <unknown>
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    run: tasks-mysql
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

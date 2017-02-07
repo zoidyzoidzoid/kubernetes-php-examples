@@ -23,4 +23,4 @@ build_v2:
 	gcloud docker -- push gcr.io/zoidbergwill-php-meetup/tasks:2
 
 deploy_v2:
-	kubectl set image deploy/tasks-app tasks-app=tasks:2
+	kubectl set image deploy/tasks-app tasks-app=gcr.io/zoidbergwill-php-meetup/tasks:2

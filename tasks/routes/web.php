@@ -19,6 +19,7 @@ Route::get('/test', function () {
       return response()->json([
         'version' => 1,
         'hostname' => env('HOSTNAME'),
+        'service' => env('SERVICE_NAME', 'tasks'),
         'message' => 'Hello, world!'
     ]);
 });

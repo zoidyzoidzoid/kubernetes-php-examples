@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: kittens-app
+  name: kittens-app
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    run: kittens-app
+  type: NodePort
+status:
+  loadBalancer: {}

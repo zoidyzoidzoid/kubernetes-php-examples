@@ -9,9 +9,9 @@ metadata:
 spec:
   clusterIP: <unknown>
   ports:
-  - port: 8000
+  - port: 9000
     protocol: TCP
-    targetPort: 8000
+    targetPort: 9000
   selector:
     run: tasks-app
   sessionAffinity: None

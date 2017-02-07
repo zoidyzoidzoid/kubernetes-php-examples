@@ -13,7 +13,6 @@ spec:
     targetPort: 9000
   selector:
     run: tasks-app
-  sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
 status:
   loadBalancer: {}

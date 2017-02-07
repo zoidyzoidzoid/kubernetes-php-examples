@@ -26,12 +26,7 @@ spec:
         run: tasks-app
     spec:
       containers:
-      - args:
-        - php
-        - artisan
-        - serve
-        - --host=0.0.0.0
-        env:
+      - env:
         - name: APP_KEY
           value: base64:jOLirBjqGtigLqYTSSdLsiVUQTMBnyQ0T1Dq3UiF/dU=
         - name: DB_HOST
@@ -42,7 +37,7 @@ spec:
           value: tasks-memcached
         - name: DB_PASSWORD
           value: forge
-        image: tasks:1
+        image: gcr.io/zoidbergwill-php-meetup/tasks:1
         imagePullPolicy: IfNotPresent
         name: tasks-app
         ports:

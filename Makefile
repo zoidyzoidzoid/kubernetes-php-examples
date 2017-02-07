@@ -1,5 +1,6 @@
 build:
-	rocker build --pull -var tag="tasks:1" .
+	rocker build --pull -var tag="gcr.io/zoidbergwill-php-meetup/tasks:1" .
+	gcloud docker -- push gcr.io/zoidbergwill-php-meetup/tasks:1
 
 db:
 	kubectl run tasks-mysql --image=mysql:5.7 --env="MYSQL_DATABASE=forge" --env="MYSQL_USER=forge" --env="MYSQL_PASSWORD=forge" --env="MYSQL_RANDOM_ROOT_PASSWORD=true" --port 3306
@@ -18,7 +19,8 @@ deploy:
 	kubectl expose deploy/tasks-app --type=NodePort
 
 build_v2:
-	rocker build --pull -var tag="tasks:2" .
+	rocker build --pull -var tag="gcr.io/zoidbergwill-php-meetup/tasks:2" .
+	gcloud docker -- push gcr.io/zoidbergwill-php-meetup/tasks:2
 
 deploy_v2:
 	kubectl set image deploy/tasks-app tasks-app=tasks:2

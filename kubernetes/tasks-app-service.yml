@@ -7,7 +7,6 @@ metadata:
   name: tasks-app
   selfLink: /api/v1/namespaces//services/tasks-app
 spec:
-  clusterIP: <unknown>
   ports:
   - port: 9000
     protocol: TCP
@@ -15,6 +14,6 @@ spec:
   selector:
     run: tasks-app
   sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
 status:
   loadBalancer: {}

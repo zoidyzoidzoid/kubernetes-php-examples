@@ -7,7 +7,6 @@ metadata:
   name: tasks-mysql
   selfLink: /api/v1/namespaces//services/tasks-mysql
 spec:
-  clusterIP: <unknown>
   ports:
   - port: 3306
     protocol: TCP

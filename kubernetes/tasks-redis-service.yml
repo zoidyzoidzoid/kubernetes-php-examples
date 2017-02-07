@@ -7,7 +7,6 @@ metadata:
   name: tasks-redis
   selfLink: /api/v1/namespaces//services/tasks-redis
 spec:
-  clusterIP: <unknown>
   ports:
   - port: 6379
     protocol: TCP

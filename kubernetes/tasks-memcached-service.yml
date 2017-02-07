@@ -7,7 +7,6 @@ metadata:
   name: tasks-memcached
   selfLink: /api/v1/namespaces//services/tasks-memcached
 spec:
-  clusterIP: <unknown>
   ports:
   - port: 11211
     protocol: TCP

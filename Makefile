@@ -24,3 +24,9 @@ build_v2:
 
 deploy_v2:
 	kubectl set image deploy/tasks-app tasks-app=gcr.io/zoidbergwill-php-meetup/tasks:2
+
+healthz:
+	@echo
+	@echo "Preparing the ion cannon:"
+	@echo
+	while true; do curl tasks.zoidbergwill.com/test && echo && sleep 1; done
